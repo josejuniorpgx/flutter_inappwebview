@@ -7,8 +7,8 @@
 
 import FlutterMacOS
 import Foundation
-@preconcurrency #if canImport(WebKit)
-import WebKit
+#if canImport(WebKit)
+@preconcurrency import WebKit 
 #endif
 
 public class InAppWebView: WKWebView, WKUIDelegate,
