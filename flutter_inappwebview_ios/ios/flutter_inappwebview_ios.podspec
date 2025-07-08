@@ -20,9 +20,17 @@ A new Flutter plugin.
   s.resource_bundles = {'flutter_inappwebview_ios_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
 
   # Flutter.framework does not contain a i386 slice. Only x86_64 simulators are supported.
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
+  s.pod_target_xcconfig = { 
+    'DEFINES_MODULE' => 'YES', 
+    'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64',
+    'OTHER_LDFLAGS' => '-weak_framework WebKit'  # FIX: iOS 18.4+ libswiftWebKit.dylib compatibility
+  }
 
   s.libraries = 'swiftCoreGraphics'
+
+  # FIX CRÍTICO: Frameworks explícitos para iOS 18+ compatibility
+  s.frameworks = 'WebKit', 'JavaScriptCore'
+  s.weak_frameworks = 'WebKit'  # Permite funcionamiento sin libswiftWebKit.dylib
 
   s.xcconfig = {
       'LIBRARY_SEARCH_PATHS' => '$(SDKROOT)/usr/lib/swift',
