@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(WebKit)
 import WebKit
+#endif
 
 @available(iOS 9.0, *)
 public class MyWebStorageManager: ChannelDelegate {

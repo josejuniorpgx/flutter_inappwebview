@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(WebKit)
 import WebKit
+#endif
 import FlutterMacOS
 
 @available(macOS 10.13, *)

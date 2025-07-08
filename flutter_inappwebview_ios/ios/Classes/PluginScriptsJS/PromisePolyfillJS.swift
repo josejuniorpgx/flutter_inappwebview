@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(WebKit)
 import WebKit
+#endif
 
 public class PromisePolyfillJS {
     public static let PROMISE_POLYFILL_JS_PLUGIN_SCRIPT_GROUP_NAME = "IN_APP_WEBVIEW_PROMISE_POLYFILL_JS_PLUGIN_SCRIPT"

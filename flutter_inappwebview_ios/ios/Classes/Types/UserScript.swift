@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(WebKit)
 import WebKit
+#endif
 
 public class UserScript: WKUserScript {
     var groupName: String?

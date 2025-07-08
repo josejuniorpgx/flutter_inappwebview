@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(WebKit)
 import WebKit
+#endif
 
 var SharedLastTouchPointTimestamp: [InAppWebView: Int64] = [:]
 

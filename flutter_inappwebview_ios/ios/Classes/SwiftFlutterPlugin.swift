@@ -17,7 +17,9 @@
 
 import Flutter
 import UIKit
+#if canImport(WebKit)
 import WebKit
+#endif
 import Foundation
 import AVFoundation
 import SafariServices

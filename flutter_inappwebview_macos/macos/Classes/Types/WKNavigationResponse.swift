@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(WebKit)
 import WebKit
+#endif
 
 extension WKNavigationResponse {
     public func toMap () -> [String:Any?] {

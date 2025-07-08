@@ -4,7 +4,9 @@
 //
 
 import Foundation
+#if canImport(WebKit)
 import WebKit
+#endif
 
 @available(iOS 17.0, *)
 public class ProxyManager: ChannelDelegate {

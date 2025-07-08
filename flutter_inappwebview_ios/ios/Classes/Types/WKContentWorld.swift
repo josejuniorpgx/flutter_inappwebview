@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(WebKit)
 import WebKit
+#endif
 
 @available(iOS 14.0, *)
 extension WKContentWorld {

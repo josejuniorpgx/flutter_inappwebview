@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(WebKit)
 import WebKit
+#endif
 
 @available(macOS 11.0, *)
 extension WKContentWorld {

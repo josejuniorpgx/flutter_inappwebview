@@ -7,7 +7,9 @@
 
 import FlutterMacOS
 import Foundation
+#if canImport(WebKit)
 import WebKit
+#endif
 
 @available(macOS 10.13, *)
 public class CustomSchemeHandler: NSObject, WKURLSchemeHandler {

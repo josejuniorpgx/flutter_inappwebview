@@ -7,7 +7,10 @@
 
 import Flutter
 import Foundation
-@preconcurrency import WebKit
+@preconcurrency
+#if canImport(WebKit)
+import WebKit
+#endif
 
 public class InAppWebView: WKWebView, UIScrollViewDelegate, WKUIDelegate,
                             WKNavigationDelegate, WKScriptMessageHandler, UIGestureRecognizerDelegate,

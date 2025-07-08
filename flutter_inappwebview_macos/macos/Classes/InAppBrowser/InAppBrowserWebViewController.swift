@@ -7,7 +7,9 @@
 
 import FlutterMacOS
 import AppKit
+#if canImport(WebKit)
 import WebKit
+#endif
 import Foundation
 
 public class InAppBrowserWebViewController: NSViewController, InAppBrowserDelegate, Disposable {

@@ -7,7 +7,9 @@
 
 import Flutter
 import UIKit
+#if canImport(WebKit)
 import WebKit
+#endif
 import Foundation
 
 public class InAppBrowserWebViewController: UIViewController, InAppBrowserDelegate, UIScrollViewDelegate, UISearchBarDelegate, Disposable {

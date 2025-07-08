@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if canImport(WebKit)
 import WebKit
+#endif
 
 @objcMembers
 public class InAppWebViewSettings: ISettings<InAppWebView> {
